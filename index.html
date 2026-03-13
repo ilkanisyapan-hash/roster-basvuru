@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ROSTER PUBG Başvuru</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:'Orbitron',sans-serif;background:linear-gradient(180deg,#0a0a0a,#151515);color:white;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.container{width:420px;max-width:95%;background:#111;border:1px solid #2a2a2a;border-radius:16px;padding:30px;box-shadow:0 0 30px rgba(0,0,0,0.8)}
+.logo{text-align:center;font-size:40px;margin-bottom:10px}
+.title{text-align:center;font-size:26px;margin-bottom:5px}
+.subtitle{text-align:center;font-size:12px;color:#aaa;margin-bottom:25px}
+label{font-size:12px;color:#bbb}
+input,select{width:100%;padding:12px;margin-top:6px;margin-bottom:14px;background:#1d1d1d;border:1px solid #333;border-radius:8px;color:white;font-family:inherit}
+input:focus,select:focus{outline:none;border:1px solid #888}
+button{width:100%;padding:14px;border:none;border-radius:10px;background:white;color:black;font-weight:600;font-size:14px;cursor:pointer;transition:0.2s}
+button:hover{transform:scale(1.03)}
+.footer{text-align:center;font-size:11px;color:#666;margin-top:20px}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="logo">🦉</div>
+<div class="title">ROSTER</div>
+<div class="subtitle">PUBG MOBILE TAKIM BAŞVURUSU</div>
+<form action="https://formspree.io/f/xreylzzb" method="POST">
+<label>İsim / Oyun Nicki</label><input type="text" name="nickname" required>
+<label>Yaş</label><input type="number" name="yas" required>
+<label>PUBG ID</label><input type="text" name="pubg_id" required>
+<label>Rank</label>
+<select name="rank" required>
+<option value="">Seç</option><option>Bronz</option><option>Gümüş</option><option>Platin</option><option>Elmas</option><option>As</option><option>As Ustası</option><option>As Otoritesi</option><option>Fatih</option>
+</select>
+<label>Rol</label>
+<select name="rol">
+<option>IGL</option><option>Fragger</option><option>Co IGL</option><option>Diğer</option>
+</select>
+<label>Günde Kaç Saat Oynuyorsun</label><input type="text" name="saat">
+<label>Instagram</label><input type="text" name="instagram">
+<button type="submit">BAŞVURUYU GÖNDER</button>
+</form>
+<div class="footer">ROSTER ESPORT ©</div>
+</div>
+</body>
+</html>
