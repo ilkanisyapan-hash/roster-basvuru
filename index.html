@@ -1,47 +1,82 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ROSTER PUBG Başvuru</title>
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
-<style>
-*{box-sizing:border-box}
-body{margin:0;font-family:'Orbitron',sans-serif;background:linear-gradient(180deg,#0a0a0a,#151515);color:white;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
-.container{width:420px;max-width:95%;background:#111;border:1px solid #2a2a2a;border-radius:16px;padding:30px;box-shadow:0 0 30px rgba(0,0,0,0.8)}
-.logo{text-align:center;font-size:40px;margin-bottom:10px}
-.title{text-align:center;font-size:26px;margin-bottom:5px}
-.subtitle{text-align:center;font-size:12px;color:#aaa;margin-bottom:25px}
-label{font-size:12px;color:#bbb}
-input,select{width:100%;padding:12px;margin-top:6px;margin-bottom:14px;background:#1d1d1d;border:1px solid #333;border-radius:8px;color:white;font-family:inherit}
-input:focus,select:focus{outline:none;border:1px solid #888}
-button{width:100%;padding:14px;border:none;border-radius:10px;background:white;color:black;font-weight:600;font-size:14px;cursor:pointer;transition:0.2s}
-button:hover{transform:scale(1.03)}
-.footer{text-align:center;font-size:11px;color:#666;margin-top:20px}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROSTER PUBG Başvuru</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: 'Orbitron', sans-serif;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.95)), url('https://i.imgur.com/8N4R4vM.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 480px;
+            max-width: 100%;
+            background: rgba(17, 17, 17, 0.9);
+            border: 1px solid #333;
+            border-radius: 16px;
+            padding: 35px;
+            box-shadow: 0 0 50px rgba(0,0,0,1);
+            backdrop-filter: blur(5px);
+        }
+        .logo { text-align: center; font-size: 45px; margin-bottom: 10px; }
+        .title { text-align: center; font-size: 28px; margin-bottom: 5px; letter-spacing: 3px; font-weight: 700; }
+        .register-call { text-align: center; font-size: 18px; color: #fff; margin-bottom: 25px; font-weight: 600; text-transform: uppercase; letter-spacing: 2px; border-top: 1px solid #444; border-bottom: 1px solid #444; padding: 10px 0; }
+        label { font-size: 11px; color: #ccc; display: block; margin-bottom: 7px; }
+        input, select { width: 100%; padding: 13px; margin-bottom: 18px; background: rgba(26, 26, 26, 0.8); border: 1px solid #444; border-radius: 8px; color: white; font-family: inherit; }
+        .submit-btn { width: 100%; padding: 16px; border: none; border-radius: 12px; background: #ffffff; color: #000; font-weight: 700; font-size: 15px; text-transform: uppercase; cursor: pointer; transition: 0.3s; margin-top: 15px; }
+        .submit-btn:hover { background: #dddddd; transform: translateY(-3px); }
+        .footer { text-align: center; font-size: 10px; color: #666; margin-top: 30px; }
+    </style>
 </head>
 <body>
+
 <div class="container">
-<div class="logo">🦉</div>
-<div class="title">ROSTER</div>
-<div class="subtitle">PUBG MOBILE TAKIM BAŞVURUSU</div>
-<form action="https://formspree.io/f/xreylzzb" method="POST">
-<label>İsim / Oyun Nicki</label><input type="text" name="nickname" required>
-<label>Yaş</label><input type="number" name="yas" required>
-<label>PUBG ID</label><input type="text" name="pubg_id" required>
-<label>Rank</label>
-<select name="rank" required>
-<option value="">Seç</option><option>Bronz</option><option>Gümüş</option><option>Platin</option><option>Elmas</option><option>As</option><option>As Ustası</option><option>As Otoritesi</option><option>Fatih</option>
-</select>
-<label>Rol</label>
-<select name="rol">
-<option>IGL</option><option>Fragger</option><option>Co IGL</option><option>Diğer</option>
-</select>
-<label>Günde Kaç Saat Oynuyorsun</label><input type="text" name="saat">
-<label>Instagram</label><input type="text" name="instagram">
-<button type="submit">BAŞVURUYU GÖNDER</button>
-</form>
-<div class="footer">ROSTER ESPORT ©</div>
+    <div class="logo">🦉</div>
+    <div class="title">ROSTER</div>
+    <div class="register-call">SEN DE KAYIT OL</div>
+
+    <form action="https://formspree.io/f/xreylzzb" method="POST" enctype="multipart/form-data">
+        
+        <label>İsim / Oyun Nicki</label>
+        <input type="text" name="nickname" required>
+
+        <label>E-posta Adresiniz (Doğrulama için gereklidir)</label>
+        <input type="email" name="email" required placeholder="ornek@gmail.com">
+
+        <label>Yaş</label>
+        <input type="number" name="yas" required>
+
+        <label>PUBG ID</label>
+        <input type="text" name="pubg_id" required>
+
+        <label>Mevcut Rank</label>
+        <select name="rank" required>
+            <option value="">Seçiniz...</option>
+            <option>Bronz - Platin</option>
+            <option>Elmas - Taç</option>
+            <option>As / As Ustası</option>
+            <option>As Otoritesi</option>
+            <option>Fatih</option>
+        </select>
+
+        <button type="submit" class="submit-btn">BAŞVURUYU TAMAMLA</button>
+
+    </form>
+    <div class="footer">ROSTER ESPORTS © 2026</div>
 </div>
+
 </body>
 </html>
